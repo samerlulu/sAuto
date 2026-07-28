@@ -14,6 +14,8 @@ New-Item -ItemType Directory -Path $subFolder2 -Force | Out-Null
 # Windows built-in icons
 $iconFolder = "$env:SystemRoot\System32\shell32.dll"
 
+write-Host "Foldres Done :)"
+
 # Function to set folder icon
 function Set-FolderIcon {
     param (
