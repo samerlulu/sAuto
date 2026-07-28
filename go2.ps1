@@ -283,14 +283,18 @@ else {
 
 Write-Host "Refreshing Explorer..."
 
-Stop-Process `
--Name explorer `
--Force `
--ErrorAction SilentlyContinue
+#Stop-Process `
+#-Name explorer `
+#-Force `
+#-ErrorAction SilentlyContinue
 
 
-Start-Process explorer.exe
+#Start-Process explorer.exe
 
+$shell = New-Object -ComObject Shell.Application
+$shell.Windows() | ForEach-Object { $_.Refresh() }
+
+[System.Runtime.InteropServices.Marshal]::ReleaseComObject($shell) | Out-Null
 
 Write-Host ""
 Write-Host "================================"
