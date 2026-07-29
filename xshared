@@ -1,7 +1,2 @@
-powershell -ExecutionPolicy Bypass -Command "$url='https://raw.githubusercontent.com/samerlulu/sAuto/main/go2.ps1?x='+[DateTime]::Now.Ticks; $out=Join-Path $env:TEMP 'script.ps1'; Remove-Item $out -Force -ErrorAction SilentlyContinue; Invoke-WebRequest -Uri $url -OutFile $out; & $out"
-
-powershell -ExecutionPolicy Bypass -Command "$url='https://raw.githubusercontent.com/samerlulu/sAuto/main/go2.ps1'; $out='$env:TEMP\script.ps1'; Invoke-WebRequest $url -OutFile $out; powershell -ExecutionPolicy Bypass -File $out"
-
-powershell -ExecutionPolicy Bypass -Command "$url='https://github.com/OWNER/REPO/blob/main/folder/go.ps1'; $out='$env:TEMP\script.ps1'; Invoke-WebRequest -Uri $url -OutFile $out; & $out"
-
+#Working script
 powershell -ExecutionPolicy Bypass -Command "$url='https://raw.githubusercontent.com/samerlulu/sAuto/main/go.ps1'; $out=Join-Path $env:TEMP 'script.ps1'; Invoke-WebRequest -Uri $url -OutFile $out; & $out"
